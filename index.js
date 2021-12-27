@@ -7,7 +7,7 @@ const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3000;
 let production = process.env.NODE_ENV === "production" ? true : false;
 if (!production) {
-  var cors = require("cors"); // ⚠️⚠️ remove later⚠️⚠️
+  var cors = require("cors"); 
   app.use(cors());
 }
 
@@ -19,8 +19,8 @@ app.use(bodyParser.json());
 
 require("./routes")(app);
 
-app.get("/test", (req, res) => {
-  res.send("Successful response.");
-});
+// app.get("/test", (req, res) => {
+//   res.send("Successful response.");
+// });
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
