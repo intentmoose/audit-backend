@@ -14,10 +14,8 @@ module.exports = (app) => {
       .request(options)
       .then(function (response) {
         res.send(response.data);
-        console.log(response.data);
       })
       .catch(function (error) {
-        console.error(error);
         res.send(error);
       });
   });
