@@ -5,11 +5,11 @@ var cors = require("cors");
 const bodyParser = require("body-parser");
 
 const PORT = process.env.PORT || 3000;
-let production = process.env.NODE_ENV === "production" ? true : false;
-if (!production) {
+// let production = process.env.NODE_ENV === "production" ? true : false;
+// if (!production) {
   var cors = require("cors"); 
   app.use(cors());
-}
+// }
 
 
 var token;
